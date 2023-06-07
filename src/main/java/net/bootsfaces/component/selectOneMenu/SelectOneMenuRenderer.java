@@ -20,6 +20,7 @@ package net.bootsfaces.component.selectOneMenu;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.el.ELException;
@@ -91,7 +92,9 @@ public class SelectOneMenuRenderer extends CoreInputRenderer {
 				}
 			}
 		}
-		throw new RuntimeException("Could not match a select item for submittedOptionValue:" + submittedOptionValue + " menu:" + menu);
+		// throw new RuntimeException
+                LOGGER.log(Level.WARNING,"Could not match a select item for submittedOptionValue:" + submittedOptionValue + " menu:" + menu);
+                return null;
 	}
 
 	/** Generates the HTML code for this component. */

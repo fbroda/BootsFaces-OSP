@@ -106,7 +106,7 @@ public class Poll extends HtmlCommandButton {
 			rw.append("var o = this;\r\n");
 			rw.append("var handleError = function(){ o.stop(); console.log('error with b:poll " + id + "');};\r\n");
 			rw.append("this.start = function(){ o.stop(); " + intervalId + " = setInterval(function(){ ");
-			rw.append("jsf.ajax.request('" + id + "', null, {'" + id + "':'" + id + "', execute:'" + execute
+			rw.append("faces.ajax.request('" + id + "', null, {'" + id + "':'" + id + "', execute:'" + execute
 					+ "', render:'" + update + "', onerror:handleError }); }, " + getInterval() + "); };\r\n");
 			rw.append("this.stop = function(){ clearInterval(" + intervalId + "); };\r\n");
 			rw.append("this.start();\r\n");

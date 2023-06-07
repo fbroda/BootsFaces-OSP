@@ -448,7 +448,7 @@ public class AddResourcesListener implements SystemEventListener {
 		 * library. This can be an error prone approach so we add all of them (if not
 		 * different specified)
 		 */
-		createAndAddComponent(root, context, SCRIPT_RENDERER, "jsf.js", "javax.faces");
+		createAndAddComponent(root, context, SCRIPT_RENDERER, "faces.js", "jakarta.faces");
 		createAndAddComponent(root, context, SCRIPT_RENDERER, "js/bsf.js", C.BSF_LIBRARY, "last");
 
 		if (loadJQuery) {
